@@ -40,9 +40,9 @@ public class Main {
         int data = (int) (Math.random() * 100 * Math.pow(Math.random() / 10, Math.random()));
         if (data <= 10) {
             System.out.println("Красный");
-        } else if (data >= 11 && data <= 20) {
+        } else if (data <= 20) {
             System.out.println("Желтый");
-        } else if (data > 20) {
+        } else {
             System.out.println("Зеленый");
         }
     }
