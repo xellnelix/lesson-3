@@ -2,12 +2,10 @@ package ru.otus.lesson3;
 
 import java.lang.Math;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Random random = new Random(); // Для случайной генерации boolean т.к. приводить double к boolean нельзя
         System.out.println("Введите целое число от 1 до 5");
         int result = scanner.nextInt();
         if (result == 1) {
@@ -19,7 +17,7 @@ public class Main {
         } else if (result == 4) {
             compareNumbers();
         } else if (result == 5) {
-            addOrSubtractAndPrint((int) (Math.random() * 10), (int) (Math.random() * 10), random.nextBoolean());
+            addOrSubtractAndPrint((int) (Math.random() * 10), (int) (Math.random() * 10), Math.random() >= 0.5);
         } else {
             System.out.println("Введенно некорректное число");
         }
